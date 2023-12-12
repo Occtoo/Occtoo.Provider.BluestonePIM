@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "bluestone_inbound_formatter": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7287",
+      "launchBrowser": false
+    }
+  }
+}
