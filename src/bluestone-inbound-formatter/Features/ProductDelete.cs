@@ -7,15 +7,15 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using bluestone_inbound_formatter.Formatters;
-using bluestone_inbound_formatter.Services;
-using bluestone_inbound_formatter.Models;
+using bluestone_inbound_provider.Formatting;
+using bluestone_inbound_provider.Services;
+using bluestone_inbound_provider.Models;
 using System.Collections.Generic;
 using Occtoo.Onboarding.Sdk.Models;
-using bluestone_inbound_formatter.Common;
+using bluestone_inbound_provider.Common;
 using System.Linq;
 
-namespace bluestone_inbound_formatter.Features
+namespace bluestone_inbound_provider.Features
 {
     public class ProductDelete
     {
@@ -42,10 +42,9 @@ namespace bluestone_inbound_formatter.Features
         public async Task Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req)
         {
-            //var jsonWebhookData = req.Body;
-            string jsonWebhookData = "{\"timestamp\":1701856990167,\"events\":[{\"changes\":{\"eventType\":\"PRODUCT_WATCH_STATE\",\"entityIds\":[\"655dcad0cb2efc2b3bcd183b\"],\"stateChange\":{\"changeType\":\"UPDATE\",\"oldValue\":\"CONNECTED\",\"newValue\":\"TO_BE_ARCHIVED\",\"context\":\"en\"}}}]}";
             try
             {
+                string jsonWebhookData = await new StreamReader(req.Body).ReadToEndAsync();
                 var webHookModel = JsonConvert.DeserializeObject<WebhookModel>(jsonWebhookData);
                 var productIds = GetProductId(webHookModel);
                 var products = new List<ProductModel>();

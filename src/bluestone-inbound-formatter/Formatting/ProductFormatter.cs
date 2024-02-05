@@ -1,15 +1,15 @@
-﻿using bluestone_inbound_formatter.Common;
-using bluestone_inbound_formatter.Models;
-using bluestone_inbound_formatter.Services;
+﻿using bluestone_inbound_provider.Common;
+using bluestone_inbound_provider.Models;
+using bluestone_inbound_provider.Services;
 using Newtonsoft.Json;
 using Occtoo.Onboarding.Sdk.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Attribute = bluestone_inbound_formatter.Models.Attribute;
+using Attribute = bluestone_inbound_provider.Models.Attribute;
 
-namespace bluestone_inbound_formatter.Formatters
+namespace bluestone_inbound_provider.Formatting
 {
     public interface IProductFormatter
     {
@@ -561,7 +561,7 @@ namespace bluestone_inbound_formatter.Formatters
 
         private static string GetMatrixValue(Matrix[] matrix)
         {
-            return JsonConvert.SerializeObject(matrix, Formatting.Indented);
+            return JsonConvert.SerializeObject(matrix, Newtonsoft.Json.Formatting.Indented);
         }
 
         private static string GetDictionaryValue(Dictionary[] dictionary)
@@ -588,7 +588,7 @@ namespace bluestone_inbound_formatter.Formatters
 
         private static string GetColumnValue(Column[] column)
         {
-            return JsonConvert.SerializeObject(column, Formatting.Indented);
+            return JsonConvert.SerializeObject(column, Newtonsoft.Json.Formatting.Indented);
         }
 
     }

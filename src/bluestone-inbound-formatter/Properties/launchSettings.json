@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "bluestone_inbound_formatter": {
+    "bluestone_inbound_provider": {
       "commandName": "Project",
       "commandLineArgs": "--port 7287",
       "launchBrowser": false

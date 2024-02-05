@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace bluestone_inbound_formatter.Common
+namespace bluestone_inbound_provider.Common
 {
     public static class IEnumerableExtensions
     {

@@ -1,6 +1,6 @@
-﻿using bluestone_inbound_formatter;
-using bluestone_inbound_formatter.Formatters;
-using bluestone_inbound_formatter.Services;
+﻿using bluestone_inbound_provider;
+using bluestone_inbound_provider.Formatting;
+using bluestone_inbound_provider.Services;
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 using Polly;
@@ -9,7 +9,7 @@ using System;
 using System.Net.Http;
 
 [assembly: FunctionsStartup(typeof(Startup))]
-namespace bluestone_inbound_formatter
+namespace bluestone_inbound_provider
 {
     internal class Startup :FunctionsStartup
     {

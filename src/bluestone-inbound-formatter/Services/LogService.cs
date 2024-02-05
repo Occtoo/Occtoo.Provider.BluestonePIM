@@ -1,9 +1,9 @@
-﻿using bluestone_inbound_formatter.Models;
+﻿using bluestone_inbound_provider.Models;
 using Microsoft.WindowsAzure.Storage.Table;
 using System;
 using System.Threading.Tasks;
 
-namespace bluestone_inbound_formatter.Services
+namespace bluestone_inbound_provider.Services
 {
     public interface ILogService
     {

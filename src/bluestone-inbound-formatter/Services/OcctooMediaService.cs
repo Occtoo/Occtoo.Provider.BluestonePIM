@@ -1,5 +1,5 @@
-﻿using bluestone_inbound_formatter.Common;
-using bluestone_inbound_formatter.Models;
+﻿using bluestone_inbound_provider.Common;
+using bluestone_inbound_provider.Models;
 using Occtoo.Onboarding.Sdk;
 using Occtoo.Onboarding.Sdk.Models;
 using System;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace bluestone_inbound_formatter.Services
+namespace bluestone_inbound_provider.Services
 {
     public interface IOcctooMediaService
     {

@@ -2,7 +2,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace bluestone_inbound_formatter.Services
+namespace bluestone_inbound_provider.Services
 {
     public interface ITokenService
     {

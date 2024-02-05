@@ -1,7 +1,7 @@
-using bluestone_inbound_formatter.Common;
-using bluestone_inbound_formatter.Formatters;
-using bluestone_inbound_formatter.Models;
-using bluestone_inbound_formatter.Services;
+using bluestone_inbound_provider.Common;
+using bluestone_inbound_provider.Formatting;
+using bluestone_inbound_provider.Models;
+using bluestone_inbound_provider.Services;
 using Microsoft.Azure.WebJobs;
 using Newtonsoft.Json;
 using System;
@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace bluestone_inbound_formatter.Features
+namespace bluestone_inbound_provider.Features
 {
     public class ProductOnboard
     {

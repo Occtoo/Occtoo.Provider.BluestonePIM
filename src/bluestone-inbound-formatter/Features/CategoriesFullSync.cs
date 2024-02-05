@@ -1,7 +1,7 @@
-using bluestone_inbound_formatter.Common;
-using bluestone_inbound_formatter.Formatters;
-using bluestone_inbound_formatter.Models;
-using bluestone_inbound_formatter.Services;
+using bluestone_inbound_provider.Common;
+using bluestone_inbound_provider.Formatting;
+using bluestone_inbound_provider.Models;
+using bluestone_inbound_provider.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
@@ -9,7 +9,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace bluestone_inbound_formatter.Features
+namespace bluestone_inbound_provider.Features
 {
     public class CategoriesFullSync
     {
@@ -34,7 +34,7 @@ namespace bluestone_inbound_formatter.Features
 
         [FunctionName("CategoriesFullSync")]
         public async Task Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req)
+            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req)
         {
             var dataSource = Environment.GetEnvironmentVariable("CategoriesDataSource");
             var dataProviderId = Environment.GetEnvironmentVariable("DataProviderId");

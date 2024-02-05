@@ -1,4 +1,4 @@
-﻿using bluestone_inbound_formatter.Models;
+﻿using bluestone_inbound_provider.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace bluestone_inbound_formatter.Services
+namespace bluestone_inbound_provider.Services
 {
     public interface IBluestoneService
     {

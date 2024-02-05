@@ -7,7 +7,7 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace bluestone_inbound_formatter.Services
+namespace bluestone_inbound_provider.Services
 {
     public interface IBlobService
     {

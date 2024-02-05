@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace bluestone_inbound_formatter.Models
+namespace bluestone_inbound_provider.Models
 {
     public class ProductModel
     {

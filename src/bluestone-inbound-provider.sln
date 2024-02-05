@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bluestone-inbound-formatter", "bluestone-inbound-formatter\bluestone-inbound-formatter.csproj", "{F7E7BE91-4A94-44A2-8904-67C9F6C8370E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bluestone-inbound-provider", "bluestone-inbound-formatter\bluestone-inbound-provider.csproj", "{F7E7BE91-4A94-44A2-8904-67C9F6C8370E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

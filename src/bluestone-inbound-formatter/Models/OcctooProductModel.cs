@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace bluestone_inbound_formatter.Models
+namespace bluestone_inbound_provider.Models
 {
     public class OcctooProductModel
     {

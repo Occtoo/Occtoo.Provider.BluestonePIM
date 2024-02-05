@@ -1,10 +1,10 @@
-﻿using bluestone_inbound_formatter.Models;
+﻿using bluestone_inbound_provider.Models;
 using Occtoo.Onboarding.Sdk.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace bluestone_inbound_formatter.Formatters
+namespace bluestone_inbound_provider.Formatting
 {
     public interface ICategoryFormatter
     {

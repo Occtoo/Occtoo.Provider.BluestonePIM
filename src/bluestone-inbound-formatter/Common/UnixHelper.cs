@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace bluestone_inbound_formatter.Common
+namespace bluestone_inbound_provider.Common
 {
     internal static class UnixHelper
     {
