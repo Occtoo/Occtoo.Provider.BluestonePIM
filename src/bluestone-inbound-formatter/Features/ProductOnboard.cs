@@ -44,6 +44,8 @@ namespace bluestone_inbound_provider.Features
 
                 var blobContent = await _blobService.ReadJsonBlobAsync(myQueueItem, containterName, connectionString);
                 await ParseAndImportFileProduct(blobContent, context);
+
+                await _blobService.ArchiveImportedBlobAsync(myQueueItem, containterName, connectionString);
             }
             catch (Exception ex)
             {
