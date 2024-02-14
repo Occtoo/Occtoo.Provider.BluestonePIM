@@ -65,9 +65,8 @@ namespace bluestone_inbound_provider.Features
             if (productDifferences != null && productDifferences.Any())
             {
                 var productsToAddUpdate = productDifferences.Where(x => x.DiffType != "DELETE").ToList();
-                var productsToDelete = productDifferences.Where(x => x.DiffType == "DELETE").ToList();
 
-                var productMediaEntities = await GetProductEntities(productsToAddUpdate, productsToDelete, webHookModel);
+                var productMediaEntities = await GetProductEntities(productsToAddUpdate, webHookModel);
 
                 var productEntities = productMediaEntities.Item1;
                 var mediaEntities = productMediaEntities.Item2;
@@ -86,7 +85,7 @@ namespace bluestone_inbound_provider.Features
             }
         }
 
-        private async Task<(List<DynamicEntity>, List<DynamicEntity>)> GetProductEntities(List<DifferenceModel> productsToAddUpdate, List<DifferenceModel> productsToDelete, WebhookModel webHookModel)
+        private async Task<(List<DynamicEntity>, List<DynamicEntity>)> GetProductEntities(List<DifferenceModel> productsToAddUpdate, WebhookModel webHookModel)
         {
             List<DynamicEntity> productEntities = new();
             List<DynamicEntity> mediaEntities = new();
@@ -104,9 +103,7 @@ namespace bluestone_inbound_provider.Features
                     var productMediaEntities = await _productFormatter.FormatProducts(products, contextKeyValue.Value);
                     productEntities = productMediaEntities.Item1;
                     mediaEntities = productMediaEntities.Item2;
-                    var productEntitesDelete = await _productFormatter.FormatProductsToDelete(productsToDelete);
-                    productEntities.AddRange(productEntitesDelete);
-                }
+                                  }
             }
 
             return (productEntities, mediaEntities);
